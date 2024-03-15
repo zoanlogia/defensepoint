@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "name": "Garlic Pasta",
+    "ingredients": ["garlic", "pasta", "olive oil"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Broccoli Salad",
+    "ingredients": ["broccoli", "raisins", "mayonnaise", "sunflower seeds"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Avocado Toast",
+    "ingredients": ["avocado", "toast", "salt", "pepper", "chili flakes"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pancakes",
+    "ingredients": [
+      "flour",
+      "sugar",
+      "baking powder",
+      "milk",
+      "butter",
+      "eggs"
+    ],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tofu Stir-Fry",
+    "ingredients": ["tofu", "soy sauce", "sesame oil", "vegetables", "rice"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chickpea Salad",
+    "ingredients": [
+      "chickpeas",
+      "tomatoes",
+      "onions",
+      "olive oil",
+      "lemon juice"
+    ],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Stuffed Bell Peppers",
+    "ingredients": ["bell peppers", "quinoa", "black beans", "corn", "salsa"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Pasta Salad",
+    "ingredients": ["pasta", "tomatoes", "onions", "olive oil", "lemon juice"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Mushroom Risotto",
+    "ingredients": [
+      "mushrooms",
+      "rice",
+      "vegetable broth",
+      "butter",
+      "parmesan"
+    ],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Fried Rice",
+    "ingredients": ["rice", "soy sauce", "vegetables", "tofu"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Spaghetti",
+    "ingredients": [
+      "spaghetti",
+      "tomato sauce",
+      "garlic",
+      "onions",
+      "olive oil"
+    ],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Mushroom Pasta",
+    "ingredients": ["pasta", "mushrooms", "garlic", "butter", "cream"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Tofu Tacos",
+    "ingredients": ["tofu", "taco shells", "lettuce", "tomatoes", "salsa"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Chickpea Curry",
+    "ingredients": ["chickpeas", "tomato sauce", "onions", "garlic", "ginger"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Stuffed Zucchini",
+    "ingredients": ["zucchini", "quinoa", "black beans", "corn", "salsa"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Pasta Primavera",
+    "ingredients": ["pasta", "vegetables", "olive oil", "garlic", "butter"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Tofu Scramble",
+    "ingredients": ["tofu", "vegetables", "turmeric", "garlic", "onions"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Veggie Burger",
+    "ingredients": ["veggie patties", "buns", "lettuce", "tomatoes", "onions"],
+    "image": "placeholder.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pesto Pasta",
+    "ingredients": ["pasta", "pesto", "olive oil", "garlic", "parmesan"],
+    "image": "placeholder.jpg"
+  }
+]
