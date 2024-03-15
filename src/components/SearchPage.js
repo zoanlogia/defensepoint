@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import mockRecipes from "../mockRecipes.json";
-import RecipeModal from "./RecipeModal";
+import RecipeModal from "./modal/RecipeModal";
 import debounce from "lodash.debounce";
+import RecipeList from "./list/RecipeList";
 
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -63,6 +64,11 @@ const SearchPage = () => {
     }, 300);
   };
 
+  const handleRecipeSelect = (recipe) => {
+    setSelectedRecipe(recipe);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="container mx-auto p-4">
       <input
@@ -77,44 +83,16 @@ const SearchPage = () => {
       {isLoading ? (
         <div className="text-center py-4">Loading...</div>
       ) : (
-        <ul className="mt-4 space-y-4">
-          {filteredRecipes.map((recipe) => (
-            <li
-              key={recipe.id}
-              className="flex justify-between items-center bg-white dark:bg-slate-600 p-4 rounded-lg shadow"
-            >
-              <span
-                className="cursor-pointer hover:text-blue-600 dark:text-white/50 hover:dark:text-blue-300 font-medium"
-                onClick={() => !isLoading && handleRecipeClick(recipe)}
-              >
-                {recipe.name}
-              </span>
-              <button
-                className={`py-2 px-4 rounded ${
-                  isFavoriteProcessing[recipe.id]
-                    ? "cursor-not-allowed bg-gray-400 text-gray-700 dark:bg-slate-800 dark:text-gray-200"
-                    : favorites.some((fav) => fav.id === recipe.id)
-                    ? "bg-yellow-400 hover:bg-yellow-500 text-white dark:bg-yellow-500 dark:hover:bg-yellow-600"
-                    : "bg-gray-200 hover:bg-gray-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200"
-                }`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  !isFavoriteProcessing[recipe.id] &&
-                    handleFavoriteToggle(recipe.id);
-                }}
-                disabled={isFavoriteProcessing[recipe.id]}
-              >
-                {favorites.some((fav) => fav.id === recipe.id) ? "★" : "☆"}
-              </button>
-            </li>
-          ))}
-
-          {filteredRecipes.length === 0 && (
-            <div className="h-screen flex justify-center items-center">
-              <p className="text-center py-4">No recipes found...</p>
-            </div>
-          )}
-        </ul>
+        <div onClick={() => handleRecipeClick}>
+          <RecipeList
+            recipes={filteredRecipes.map((recipe) => ({
+              ...recipe,
+              isFavorite: favorites.some((fav) => fav.id === recipe.id),
+            }))}
+            onFavoriteToggle={handleFavoriteToggle}
+            onRecipeSelect={handleRecipeSelect}
+          />
+        </div>
       )}
       <RecipeModal
         isOpen={isModalOpen}
