@@ -1,31 +1,27 @@
 import React from "react";
 
 const RecipeModal = ({ isOpen, onClose, recipe }) => {
-  if (!isOpen) return null;
+  if (!isOpen || !recipe) return null;
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(0,0,0,0.5)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div style={{ backgroundColor: "#fff", padding: 20 }}>
-        <h2>{recipe.name}</h2>
-        <ul>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg max-w-md w-full">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-semibold dark:text-white">
+            {recipe.name}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-800 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            &times;
+          </button>
+        </div>
+        <ul className="list-disc list-inside mb-4 dark:text-gray-200">
           {recipe.ingredients.map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
         </ul>
-        <p>Insert cooking instructions here...</p>
-        <button onClick={onClose}>Close</button>
       </div>
     </div>
   );
