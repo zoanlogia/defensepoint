@@ -2,18 +2,27 @@ import React, { useState, useEffect } from "react";
 import RecipeList from "./list/RecipeList";
 
 const FavoritesPage = () => {
+  // State for storing the user's favorite recipes
   const [favorites, setFavorites] = useState([]);
 
+  // Effect to load favorites from localStorage when the component mounts
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("recipeFavorites"));
-    if (storedFavorites) setFavorites(storedFavorites);
+    // If there are stored favorites, update the state
+    if (storedFavorites) {
+      setFavorites(storedFavorites);
+    }
   }, []);
 
+  // Function to handle removing a recipe from favorites
   const handleRemoveFavorite = (recipeId) => {
+    // Filter out the recipe that matches the recipeId
     const updatedFavorites = favorites.filter(
       (recipe) => recipe.id !== recipeId
     );
+    // Update the favorites state with the filtered list
     setFavorites(updatedFavorites);
+    // Update localStorage with the new list of favorites
     localStorage.setItem("recipeFavorites", JSON.stringify(updatedFavorites));
   };
 

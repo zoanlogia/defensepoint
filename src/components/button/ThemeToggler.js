@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 
+// ThemeToggler component
 const ThemeToggler = () => {
   const { theme, toggleTheme } = useTheme();
 
@@ -10,7 +11,6 @@ const ThemeToggler = () => {
       className="flex items-center justify-between w-12 h-6 p-1 rounded-full bg-gray-200 dark:bg-gray-600 overflow-hidden"
       aria-label="Toggle theme"
     >
-      {/* Sun Icon */}
       <div
         className={`w-4 h-4 transform ${
           theme === "light" ? "translate-x-6" : "translate-x-0"

@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes, // Use `Routes` instead of `Switch`
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import SearchPage from "./components/SearchPage";
 import FavoritesPage from "./components/FavoritesPage";
 import ThemeToggler from "./components/button/ThemeToggler";
