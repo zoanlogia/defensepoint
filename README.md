@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Usage
+
+- Start typing ingredients in the search field to see matching recipes.
+- Click on a recipe to view its detailed information.
+- Click the star icon to add/remove a recipe from your favorites.
+- Access your favorite recipes through the "Favorites" link.
+- Toggle the theme switch to change between light and dark modes.
+
+## Technologies and Libraries
+
+- **React**: For building the user interface.
+- **TailwindCSS**: For styling and theming support.
+- **lodash.debounce**: To optimize real-time search functionality.
+- **localStorage**: For persisting favorite recipes across sessions.
+- **react-icons**: For using icons within the application.
+
+## Acknowledgments
+
+- Mock recipe data provided within the application for demonstration purposes.
+- Icons used from `react-icons` for a visually engaging user interface.
